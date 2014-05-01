@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<canvas id="sketch" width="800" height="600">
+</canvas>
+<script>
+document.addEventListener('DOMContentLoaded', main);
+
+var sketch = document.getElementById('sketch');
+var context = sketch.getContext("2d");
+
+function main() {
+	var sketch = document.getElementById('sketch');
+	var context = sketch.getContext("2d");
+
+context.fillStyle = "#990033"	
+context.fillRect(30,30,200,300);
+context.fillStyle = "#908033"
+draw_circle(100,50,30)
+}
+
+function draw_circle(x, y, r) {
+	context.beginPath();
+	context.arc(x, y, r, 0, 2 * Math.PI, true);
+	context.closePath();
+	context.fill();
+}
+</script>
+</body>
+</html>
